@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-batch-executor"
+version = "0.1.0"
+description = "Parallel asynchronous tool caller with dependency graph resolution for MCP"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+mcp-batch-executor = "mcp_batch_executor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_batch_executor*"]
